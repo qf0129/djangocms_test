@@ -1,0 +1,50 @@
+<style type="text/css">
+.lang_container {
+    display: inline-block;
+    font-size: 12px;
+    min-width: 70px;
+    position: relative;
+    padding:  5px 10px;
+    vertical-align:middle;
+    color: #999;
+}
+.lang_container span{
+    border-bottom: 1px solid #999;
+}
+.lang_container:hover .lang_select {
+    display: block;
+}
+
+.lang_select {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 3px #ccc;
+    background: #fff;
+}
+
+.lang_select .lang {
+    min-width: 70px;
+    list-style-type: none;
+    padding:  5px 10px;
+}
+
+.lang_select .lang a {
+    text-decoration: none;
+    color: #999;
+}
+
+.lang_select .lang a:hover {
+    color: #111;
+}
+</style>
+<div class="lang_container">
+    <span></span>
+    <ul class="lang_select">
+        {% load menu_tags %} {% language_chooser %}
+    </ul>
+</div>
+<script type="text/javascript">
+$('.lang_container span').html($('.lang_container .active a').html());
+</script>

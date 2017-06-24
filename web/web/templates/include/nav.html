@@ -1,0 +1,43 @@
+<style type="text/css">
+.nav_root {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0  1px 2px #eee;
+    position: relative;
+}
+
+.nav_container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.logo_bar {
+    display: inline-block;
+}
+
+.menu_bar {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menu_right_bar {
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 20%;
+}
+.lang_bar{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+</style>
+{% load menu_tags %}
+<div class="nav_root">
+    <div class="nav_container">
+        <div class="logo_bar"> {% include 'include/logo.html' %} </div>
+        <div class="menu_bar">{% include 'include/menu.html' %} </div>
+        <div class="menu_right_bar">{% include 'include/menu_right.html' %} </div>
+    </div>
+    <div class="lang_bar"> {% include 'include/lang.html' %} </div>
+</div>

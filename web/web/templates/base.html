@@ -1,0 +1,33 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!doctype html>
+<html>
+
+<head>
+    <title>{% block title %}This is my new project home page{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0
+    }
+    .root_container {
+        width: 100%;
+    }
+    </style>
+    {% render_block "css" %}
+    {% block css %}{% endblock css %}
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="nav_bar">
+        {% include 'include/nav.html' %}
+    </div>
+    <div class="root_container">
+        {% block content %}{% endblock content %}
+    </div>
+    {% render_block "js" %}
+    {% block js %}{% endblock js %}
+</body>
+
+</html>
