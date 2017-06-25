@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '192.168.3.131',
     '115.29.108.171',
     'dev.cn.mygululu.com',
+    'woow.xyz',
 ]
 
 
