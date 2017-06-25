@@ -21,10 +21,13 @@ djangocms-style==2.0.2
 djangocms-text-ckeditor==3.5.0
 djangocms-video==2.0.3
 easy-thumbnails==2.4.1
+gevent==1.2.2
+greenlet==0.4.12
+gunicorn==19.7.1
 html5lib==0.9999999
 olefile==0.44
+Pillow==4.1.1
 pytz==2017.2
 six==1.10.0
 tzlocal==1.4
 Unidecode==0.4.20
-Pillow==4.1.1
